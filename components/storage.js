@@ -18,7 +18,6 @@ export const saveStoredItems = async (items) => {
 
 export const validateInput = (name, description) => {
   if (!name.trim() || !description.trim()) {
-    Alert.alert('Validation Error', 'Both name and description are required.');
     return false;
   }
   return true;

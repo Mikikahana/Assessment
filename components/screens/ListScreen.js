@@ -33,7 +33,7 @@ const ListScreen = ({ navigation }) => {
       newItems.splice(index, 1);
     } else if (action === 'edit') {
       navigation.navigate('AddItem', { item: items[index], index });
-      return; // Exit early to prevent setting items state unnecessarily
+      return;
     }
 
     await updateItems(newItems);
@@ -87,10 +87,10 @@ const styles = StyleSheet.create({
   },
   itemButtons: {
     flexDirection: 'row',
-    marginTop: 8, // Adjust spacing between itemText and itemButtons
+    marginTop: 8,
   },
   button: {
-    marginLeft: 8, // Add margin between Edit and Delete buttons
+    marginLeft: 8,
   },
   title: {
     fontSize: 18,
